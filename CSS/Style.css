@@ -1,0 +1,408 @@
+
+body{
+    background-color: #efefef;
+    margin: 0;
+    font-family: 'Poppins';
+}
+p{
+    color: #61677A;
+}
+
+#home{
+    margin:30px;
+}
+
+#about{
+    margin: 10px;
+}
+#work{
+    margin: 10px;
+}
+
+/* Header */
+
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-transform: uppercase;
+    height: 90px;
+    background-color: white;
+}
+
+nav ul{
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+ul li ul.dropdown li{
+    display: block ;
+    width: 100px;
+    
+}
+ul li ul.dropdown{
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    display:none;
+}
+ul li a:hover{
+    background: #1b9bff;
+    transition: .5s;
+    display: block;
+    color: white;
+    
+}
+li{
+    text-decoration: none;
+    color: #1D5D9B;
+    font-weight: bold;
+}
+a{
+    
+    text-decoration: none;
+    color:  #1D5D9B;;
+    font-weight: bold;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+    
+}
+
+.left{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (max-width:560px){
+    nav ul{
+        flex-direction: column;
+    }
+}
+/* Main section */
+
+main{
+    margin: auto 30px;
+}
+h1{
+    font-size: 7rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.intro1{
+    font-size: 20px;
+    line-height: 1;
+    padding-right: 40px;
+
+}
+.intro1 h2{
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+h2 span{
+    font-size: 2.5rem;
+}
+h2{
+    margin-top: 50px;
+}
+.container{
+    margin-bottom: 50px;
+    display: flex;
+    gap: 40px;
+}
+.logos h2{
+    border-bottom:5px solid;
+    width: 140px;
+}
+.logos{
+    margin-bottom: 50px;
+}
+.logos ul{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-top: 60px;
+}
+@media (max-width: 560px) {
+    h1{
+        font-size: 60px;
+        text-align: center;
+    }    
+    .middle-container img{
+        display: none;
+    }
+    .image{
+        display: none;
+    }
+    .contact-icons{
+        flex-direction: column;
+        text-align: center;
+    }
+    .experience{
+        flex-direction: column;
+        text-align: center;
+    }
+    .work-heading{
+        margin-top: 80px;
+        
+    }
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (min-width: 800px){
+    .experience{
+        gap: 100px;
+    }    
+    .work-heading{
+        margin: 200px auto 50px auto;
+    }
+    .left{
+        position: relative;
+
+        right: 150px;
+    }
+    .navbar{
+        position: relative;
+        left: 180px;
+    }
+    .intro1{
+        border-right: 1px solid black;
+    }
+}
+
+/* About section */
+
+#about {
+    margin-top: 50px;
+
+}
+#about h2{
+    border-bottom:5px solid;
+    color: #147efb;
+    width: 130px;
+    margin-bottom: 50px;
+}
+#about p{
+    color: black;
+    max-width: 650px;
+}
+.middle-container img{
+    float: right;
+    width: 400px;
+    position: absolute;
+    background-color: #A1CCD1;
+    padding: 30px 50px 0 50px;
+    border: 3px solid #2d2e32;
+}
+.image{
+    position: relative;
+    left: 150px;
+    bottom: 100px;
+}
+.middle-container {
+    font-size: 1.5rem;
+    display: flex;
+}
+
+h3{
+    font-size: 2rem;
+
+}
+.mini{
+    font-size: 1.5rem;
+}
+.experience {
+    display: flex;
+    font-weight: bold;
+}
+.experience h3{
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+/* Work */
+
+
+.work-heading{
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+.work-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 100px;
+}
+.work-content img{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    width: 350px;
+    height: 250px;   
+    position: relative; 
+    overflow: hidden;
+}
+.extra{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+}
+.card p{
+    margin: 0 20px;
+    color: white;
+}
+.extra:hover{
+    opacity: 1;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+.card h3{
+    color: #ffe100;
+    margin: 0 20px;
+}
+.extra > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+}
+
+.extra:hover > *{
+    transform: translateY(0);;
+}
+
+button{
+    text-align: center;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+button p{
+    color: white;
+    font-family: 'Poppins';
+}
+
+.ad{
+    background-color: #CEE6F3;
+    border: 1px solid black;
+    padding: 20px;
+    width: 350px;
+    height: 230px;    
+}
+.ad h3{
+    font-size: 1.5rem;
+}
+/* footer */
+ footer{
+    padding: 30px 50px 100px 50px;
+    background-color: white;
+ }
+
+ footer h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom:5px solid;
+    color: #147efb;
+    width: 130px;
+    margin-bottom: 10px;
+ }
+ 
+ footer h3{
+    display: block;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 70px;
+    
+ }
+
+ .contact-iconbox span {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 2rem
+}
+
+span i{
+    color: #147efb;
+    font-size: 2.5rem;
+}
+.fa-solid{
+    font-weight: 900;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-iconbox{
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+.contact-iconbox a:hover{
+    transform: scale(1.2);
+}
+
+.contact-info h3{
+    margin: 10px auto;
+}
+
+.contact-icons{
+    align-items: center;
+    display: flex;
+    gap: 6rem;
+}
+
+.end{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px 0 50px;
+    color: white;
+}
+
+.end i{
+    color: white;
+}
+
+.end a:hover{
+    transform: scale(1.5);
+}
+.social {
+    display: flex;
+    gap: 20px;
+}
